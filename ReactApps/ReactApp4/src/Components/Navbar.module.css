@@ -1,0 +1,46 @@
+.navbar
+{
+    
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    width: 100%;
+    vertical-align:center;
+    justify-content: space-between;
+}
+.navbar div
+.menu{
+    display:flex;
+    flex-direction:row;
+    vertical-align: center;  
+}
+
+.rightNavbar
+{
+    
+    margin: 0 1rem 0 0;
+}
+
+.menu
+{
+    list-style: none;
+}
+
+.menu li
+{
+  
+    padding: 0 0px;
+    font-size: 8px;
+    transition : 0.2s ease;
+    color:black;
+    margin:20px;
+    cursor:pointer;
+} 
+
+.menu li:hover
+{
+    
+    color:whitesmoke;
+    font-size: 9px;
+
+} 
