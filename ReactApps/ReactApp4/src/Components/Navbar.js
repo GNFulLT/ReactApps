@@ -4,6 +4,15 @@ import $ from "jquery";
 
 const Navbar = ( props ) => 
 {
+    const MouseClickHandler = () => 
+    {
+ 
+        $(`.${styles["companyName"]}`).each(function(){
+            console.log("girdi")
+            $(this).addClass(`${styles["anim"]}`);
+            setTimeout(() => {$(this).removeClass(`${styles["anim"]}`)},600)
+        });
+    }
     const MouseEnterHandler = () =>
     {
         $(`.${styles["menu"]} > li`).each(function(){
@@ -12,20 +21,21 @@ const Navbar = ( props ) =>
             $(this).css('width', wid+'px');
             $(this).css('height',height+"px");
         });
+        
     }
     return(
     <nav className={`${styles["navbar"]}`}>
         <div>
         <img alt="qwenwq" src={logo} width="60" height="20">
         </img>
-        <label>Teknik Servis</label>
+        <label className={`${styles["companyName"]}`}>Teknik Servis</label>
         </div>
         <div className={`${styles["rightNavbar"]}`}>
             <ul className={`${styles["menu"]}`}>
-                <li onMouseEnter={MouseEnterHandler}>Home</li>
-                <li>Services</li> 
-                <li>About</li> 
-                <li>Contact</li> 
+                <li onClick={MouseClickHandler} onMouseEnter={MouseEnterHandler}>Home</li>
+                <li onClick={MouseClickHandler}>Services</li> 
+                <li onClick={MouseClickHandler}>About</li> 
+                <li onClick={MouseClickHandler}>Contact</li> 
             </ul>
         </div>
     </nav>

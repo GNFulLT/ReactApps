@@ -37,6 +37,7 @@
     cursor:pointer;
 } 
 
+
 .menu li:hover
 {
     
@@ -44,3 +45,16 @@
     font-size: 9px;
 
 } 
+
+.companyName
+{
+    color:black;
+}
+.anim{
+    animation: nameAnim 550ms ease forwards;
+}
+@keyframes nameAnim{
+    0% {color:black}
+    50% {color:whitesmoke}
+    100% {color:black}  
+}
