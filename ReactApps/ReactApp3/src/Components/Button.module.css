@@ -1,0 +1,136 @@
+.button
+{
+    position:relative;
+    display:inline-block;
+    width:100px;
+    height:20px;
+    overflow:hidden;
+}
+.button button a
+{
+    color:rgba(255,255,255,0.25);
+    transition: 0.5s;
+}
+.button:hover a
+{
+    color:rgba(255,255,255,1);
+    transition: 0.5s;
+}
+
+.button button
+{
+    background-color: #3b414b;
+    border:none;
+    width:100%;
+    height:100%;
+}
+
+
+.button span{
+    display:block;
+    position:absolute;
+    background: #2894ff;
+}
+
+.button span:nth-child(1)
+{
+    left:0;
+    bottom:0;
+    width:1px;
+    height:100%;
+    transform:scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+
+}
+
+.button span:nth-child(2)
+{
+    left:0px;
+    bottom: 0px;
+    width:100%;
+    height:1px;
+    transform:scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+
+}
+
+
+.button span:nth-child(3)
+{
+    right:0;
+    bottom: 0px;
+    width:1px;
+    height:100%;
+    transform:scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+
+    
+}
+.button span:nth-child(4)
+{
+    left:0px;
+    top: 0;
+    width:100%;
+    height:1px;
+    transform:scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+
+
+}
+.button:hover span:nth-child(1)
+{
+    transform:scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+.button:hover span:nth-child(2)
+{
+    transform:scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.button:hover span:nth-child(3)
+{
+    transform:scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+.button:hover span:nth-child(4)
+{
+    transform:scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+
+}
+
+.ripple {
+	background-color: #a9d4ff;
+	width: 1rem;
+	height: 1rem;
+	position: absolute;
+	border-radius: 50%;
+	transform: translateX(-100%) translateY(-100%);
+	mix-blend-mode: screen;
+	animation: ripple 1250ms ease-out forwards, fade 1500ms ease-out forwards;
+}
+
+@keyframes ripple {
+	0%   { transform: translate(-100%, -100%); }
+	80%  { transform: translate(-100%, -100%) scale(50); }
+	100% { transform: translate(-100%, -100%) scale(50); opacity: 0; }
+}
+
+@keyframes fade {
+	0%   { opacity: 1; }
+	100% { opacity: 0; }
+}
+
